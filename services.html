@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>   
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Talent Website</title>
+    
+    <!-- link this html doc to a css doc named main or style typically -->
+    <link rel="stylesheet" href="css/services.css">  
+
+</head>
+<body>
+    <!-- Container to center image in middle, regardless of browser resolution.
+    our plan is to host the center information, with it taking up like 80% of screen size-->
+    <div class=container>
+        <header> <!-- headers is a semantic element -->
+
+            <img src="images/seo.jpg" alt="Logo Alt" class="logo">
+            
+            <!-- Good practice to wrap navigation menu in nav tag, not needed though.-->
+            <nav>
+                <!-- a href refers to another mobile tag. a-tag is clickable.
+                    If you wanted to refer to another html doc, you would 
+                    put in href="services.html" otherwise just href="#" to go nowhere-->
+                <!-- Hiding hamburger menu icon if desktop-->                
+                <a href="#" class="hide-desktop">
+                    <!-- id is for javascript so we can attach a different class when a person 
+                        clicks on it, and javascript executes code on click -->
+                    <img src="images/ham.svg" alt="toggle menu" class="menu" id="menu">
+                </a>
+                <!-- unordered list for menu-->
+                <!-- give it a class in case you add more ul later. without a class it would be referred to as just 'ul'-->
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <!-- Create List items-->
+                    <li id="exit" class="exit-btn hide-desktop"><img src="images/exit.svg" alt="Exit Menu"></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section> <!-- Primary section of document, "hero" section? -->
+            <img src="images/shop_sale1.jpg" alt="shop graphic" class="graphic">
+            
+            <!--  Heading tags of important areas of the page, like text. -->
+            <h1>Our products:</h1>
+            <p class="subhead">Try adding something to your cart!</p>
+           
+            <!-- can have as many classes as you want, but not true for IDs -->
+            <img src="images/scroll.svg" alt="scroll down" class="scroll hide-mobile show-desktop">
+        </section>
+    </div> 
+    
+    <!-- New container because we want this one to extend to 100% of screen width instead of 80% -->
+    <div class="blue-container">
+        <!-- Then we want a container for the objects within the blue background container -->
+        <div class="container">
+            <ul><!--  no class needed, canr eference to this using the blue-container class, ul subset -->
+                <li>
+                    <span class="shop-item-title">Phone X10</span>
+                    <img class="shop-image" src="images/product-1.png" alt="product icon">
+                    <p>Dual Cameras <br> AI Photo Learning </p>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">94.00$</span>
+                        <button class="btn btn-primary shop-item-button"> ADD TO CART</button>
+                    </div>
+                </li>
+                <li>
+                    <span class="shop-item-title">Phone Zen5</span>
+                    <img class="shop-image" src="images/product-2.png" alt="product icon">
+                    <p>20" All-screen display <br> Snapfly Mobile Platform </p>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">98.00$</span>
+                        <button class="btn btn-primary shop-item-button"> ADD TO CART</button>
+                    </div>
+                </li>
+                <li>
+                    <span class="shop-item-title">Taze 7</span>
+                    <img class="shop-image" src="images/product-3.png" alt="product icon">
+                    <p>20MP Dual Selfie Cameras <br> Ultra-wide view </p>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">96.00$</span>
+                        <button class="btn btn-primary shop-item-button"> ADD TO CART</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+   
+    <div>
+        <div class="container">
+            <!-- any h# is fine, no w3c compliance errors will be thrown -->
+            <h2>Cart</h2>  
+            <!-- create a div to set items on the same line (and create a sepperator from previous content) -->
+            <div class="cart-row">
+                <span class="cart-column cart-head cart-item">ITEM</span>
+                <span class="cart-column cart-head cart-price">PRICE</span>
+                <span class="cart-column cart-head cart-quantity">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong>Total</strong>
+                <span class="cart-total-price">0$</span>
+            </div>
+            <button  class="btn btn-primary btn-cart-purchase">PURCHASE</button>
+        </div>
+    </div>
+    
+    <!-- Semantic html element. bottom fotoer portion. -->
+    <footer>
+        <div class="footer-container">
+            <div class="container">
+                <a href="index.html">
+                    <img src="images/seo.jpg" class="logo" alt="logo">
+                </a>
+                
+                <!-- paragraph for text -->
+                <p class="address">  </p>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                   <!--  <li><a href="#">Contact</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+<!-- now we add our javascript, so our clicks go somewhere. Can add javascript in
+html or link to a specific .js file. 
+Note diff syntax, and functions within javascript have a diff one too.-->
+<!-- Can add an 'async' parameter to load javascript aslongside html instead of one afetr the other -->
+<script src="store.js"> </script>
+
+</body>
+</html>
